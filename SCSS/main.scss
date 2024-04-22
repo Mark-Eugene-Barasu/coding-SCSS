@@ -1,3 +1,31 @@
+// import partials
+@import "./resets";
+@import "./variables";
+@import "./function";
+
+// Maps
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+
+
 body{
-    background-color: blue;
+    background-color: $primary-color;
+    color: $text-color;
+
 }
+.main {
+    width: 80%;
+    margin: 0 auto;
+
+    #{&}_paragraph{
+        font-weight: weight(bold); // used the weight function _function.scss partial. 
+
+        &:hover {
+            color: pink;
+        }
+    }
+}
+

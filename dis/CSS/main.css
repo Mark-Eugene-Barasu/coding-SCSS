@@ -1,3 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
-  background-color: blue;
+  background-color: #272727;
+  color: #fff;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+}
+.main .main_paragraph {
+  font-weight: 700;
+}
+.main .main_paragraph:hover {
+  color: pink;
 }/*# sourceMappingURL=main.css.map */
