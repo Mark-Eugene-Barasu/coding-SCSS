@@ -10,12 +10,24 @@ body {
 }
 
 .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 80%;
   margin: 0 auto;
 }
-.main .main_paragraph {
+.main .main_paragraph1, .main .main_paragraph2 {
   font-weight: 700;
 }
-.main .main_paragraph:hover {
+.main .main_paragraph1:hover, .main .main_paragraph2:hover {
   color: pink;
+}
+.main .main_paragraph2:hover {
+  color: #ff652f;
+}
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */

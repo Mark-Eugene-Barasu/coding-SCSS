@@ -2,6 +2,7 @@
 @import "./resets";
 @import "./variables";
 @import "./function";
+@import "./mixins";
 
 // Maps
 $font-weights: (
@@ -14,18 +15,35 @@ $font-weights: (
 body{
     background-color: $primary-color;
     color: $text-color;
+    @include theme(false);
 
 }
 .main {
+    @include flexCenter(row);
     width: 80%;
     margin: 0 auto;
 
-    #{&}_paragraph{
+    #{&}_paragraph1 {
         font-weight: weight(bold); // used the weight function _function.scss partial. 
 
         &:hover {
             color: pink;
         }
+    }
+
+    #{&}_paragraph2 {
+        // texted every property, functions and mixins of paragraph1 to paragraph2
+        @extend .main_paragraph1;
+
+
+        // now if you want extra special properties
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    @include mobile{
+        flex-direction: column;
     }
 }
 
